@@ -36,7 +36,7 @@ function Heart() {
 
 export function HeartMesh() {
   return (
-    <div className="h-34 w-34">
+    <div className="h-74 w-74">
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[3, 3, 5]} intensity={2} color="#FFD700" />

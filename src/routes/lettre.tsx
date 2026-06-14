@@ -73,7 +73,7 @@ function Lettre() {
         transition={{ duration: 1 }}
         className="relative z-10 mx-auto max-w-3xl px-5 pb-32 pt-16"
       >
-        <div className="animate-letter-unfold rounded-2xl border border-gold/30 bg-rose-night/70 p-6 backdrop-blur-md sm:p-12">
+        <div className="animate-letter-unfold rounded-2xl border border-gold/70 bg-rose-night/90 p-6 backdrop-blur-md sm:p-12">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ function Lettre() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 className="text-xl leading-relaxed text-pearl sm:text-3xl"
-                style={{ fontFamily: "'Dancing Script', cursive" }}
+                style={{ fontFamily: "Dancing Script" }}
               >
                 {line}
                 {i === currentLineIndex && isTyping && (
@@ -110,7 +110,7 @@ function Lettre() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col items-center pt-4"
+                className="flex flex-col items-center "
               >
                 <HeartMesh />
               </motion.div>
@@ -121,7 +121,7 @@ function Lettre() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col items-center gap-4 pt-8"
+                className="flex flex-col items-center gap-4 "
               >
                 <Link to="/secret">
                   <Button
