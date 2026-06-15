@@ -1,14 +1,20 @@
-import { Link } from "@tanstack/react-router";
-import { Home } from "lucide-react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
 
 export function Navigation() {
+  const location = useLocation();
+  
+  // Cacher le bouton sur la page d'accueil
+  if (location.pathname === "/") {
+    return null;
+  }
+
   return (
     <Link
       to="/"
-      className="fixed left-4 top-4 z-50 flex items-center gap-2 rounded-full bg-rose-night/50 px-3 py-2 text-pearl/60 backdrop-blur-sm transition-all hover:bg-rose-night/80 hover:text-gold hover:shadow-lg hover:shadow-gold/20"
+      className="fixed left-6 top-6 z-50 flex items-center justify-center rounded-full bg-rose-night/70 p-3 text-pearl/80 backdrop-blur-md transition-all hover:bg-rose-night hover:text-gold hover:shadow-lg hover:shadow-gold/30"
     >
-      <Home size={16} />
-      <span className="text-sm">Accueil</span>
+      <ArrowLeft size={20} />
     </Link>
   );
 }
