@@ -36,7 +36,7 @@ function Lettre() {
     if (currentLineIndex < LIGNES.length) {
       const currentLine = LIGNES[currentLineIndex];
       let charIndex = 0;
-      const typingSpeed = 10; // vitesse de frappe en ms
+      const typingSpeed = 60; // vitesse de frappe en ms
 
       const typeInterval = setInterval(() => {
         if (charIndex <= currentLine.length) {
@@ -91,7 +91,7 @@ function Lettre() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-xl leading-relaxed text-pearl sm:text-2xl"
+                className="text-xl leading-relaxed text-pearl sm:text-3xl"
                 style={{ fontFamily: "'Dancing Script', cursive" }}
               >
                 {line}
@@ -99,7 +99,7 @@ function Lettre() {
                   <motion.span
                     animate={{ opacity: [1, 0] }}
                     transition={{ repeat: Infinity, duration: 0.8 }}
-                    className="ml-1 inline-block w-2 h-6 bg-gold"
+                    className="ml-1 inline-block w-1 h-6 bg-gold"
                   />
                 )}
               </motion.p>
@@ -110,7 +110,7 @@ function Lettre() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col items-center pt-8"
+                className="flex flex-col items-center pt-4"
               >
                 <HeartMesh />
               </motion.div>
