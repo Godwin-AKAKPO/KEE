@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { PetalsCanvas } from "@/components/PetalsCanvas";
 import { HeartMesh } from "@/components/HeartMesh";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/lettre")({
   head: () => ({
@@ -64,12 +65,14 @@ function Lettre() {
               <HeartMesh />
             </div>
 
-            <div className="pt-6 text-center">
-              <Link
-                to="/secret"
-                className="serif inline-block text-base italic text-gold/80 underline decoration-gold/40 underline-offset-8 transition-all hover:text-gold"
-              >
-                Un dernier secret…
+            <div className="flex flex-col items-center gap-4 pt-6">
+              <Link to="/secret">
+                <Button
+                  size="lg"
+                  className="serif text-base animate-pulse-gold bg-gradient-to-r from-gold to-amber-400 text-rose-night hover:from-amber-400 hover:to-gold shadow-lg shadow-gold/30"
+                >
+                  Un dernier secret…
+                </Button>
               </Link>
             </div>
           </div>
