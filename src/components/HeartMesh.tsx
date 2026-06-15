@@ -16,7 +16,6 @@ function Heart() {
     shape.bezierCurveTo(x + 0.5, y + 0.5, x, y, x, y);
     const geo = new THREE.ExtrudeGeometry(shape, { depth: 0.5, bevelEnabled: true, bevelSegments: 8, bevelSize: 0.15, bevelThickness: 0.15 });
     geo.center();
-    geo.rotateZ(Math.PI);
     return geo;
   }, []);
 
