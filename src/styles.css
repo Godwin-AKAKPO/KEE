@@ -1,0 +1,165 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-rose-powder: #FFB6C1;
+  --color-rose-fuchsia: #FF6B9D;
+  --color-rose-gold: #FF9BB5;
+  --color-violet-soft: #C77DFF;
+  --color-pearl: #FFF0F5;
+  --color-gold: #FFD700;
+  --color-rose-deep: #8B1E4A;
+  --color-rose-night: #2A0A1F;
+
+  /* legacy aliases kept so older components compile */
+  --color-rose: #FF6B9D;
+  --color-violet-deep: #6B2A8C;
+  --color-midnight: #2A0A1F;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: #1F0418;
+  --foreground: #FFF0F5;
+  --card: #2A0A1F;
+  --card-foreground: #FFF0F5;
+  --popover: #2A0A1F;
+  --popover-foreground: #FFF0F5;
+  --primary: #FF6B9D;
+  --primary-foreground: #FFF0F5;
+  --secondary: #C77DFF;
+  --secondary-foreground: #FFF0F5;
+  --muted: #3A1530;
+  --muted-foreground: #F5C8D9;
+  --accent: #FFD700;
+  --accent-foreground: #2A0A1F;
+  --destructive: oklch(0.6 0.24 25);
+  --destructive-foreground: #FFF0F5;
+  --border: rgba(255, 255, 255, 0.14);
+  --input: rgba(255, 255, 255, 0.16);
+  --ring: #FF6B9D;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+
+  /* @media (hover: hover) and (pointer: fine) {
+    * { cursor: none; }
+  } */
+
+  body::-webkit-scrollbar { display: none; }
+  body { -ms-overflow-style: none; scrollbar-width: none; }
+
+  h1, h2, h3, .serif { font-family: var(--font-serif); }
+}
+
+@utility text-glow-gold {
+  text-shadow: 0 0 18px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.35);
+}
+
+@utility text-glow-rose {
+  text-shadow: 0 0 18px rgba(255, 107, 157, 0.75), 0 0 40px rgba(255, 155, 181, 0.4);
+}
+
+@utility text-glow-pink {
+  text-shadow: 0 0 14px rgba(255, 182, 193, 0.9), 0 0 32px rgba(255, 107, 157, 0.5);
+}
+
+@utility bg-aurora {
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(199, 125, 255, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 107, 157, 0.55) 0%, transparent 60%),
+    linear-gradient(180deg, #2A0A1F, #14040E);
+}
+
+@utility bg-rose-dream {
+  background: linear-gradient(160deg, #FFB6C1 0%, #FF9BB5 40%, #FF6B9D 100%);
+}
+
+@utility bg-rose-night {
+  background: linear-gradient(180deg, #3A0A28 0%, #1A0410 100%);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 30px rgba(255, 107, 157, 0.55), 0 0 60px rgba(255, 215, 0, 0.25); }
+  50%      { box-shadow: 0 0 55px rgba(255, 107, 157, 0.9),  0 0 110px rgba(255, 215, 0, 0.45); }
+}
+
+@keyframes letter-unfold {
+  0% { transform: perspective(1200px) rotateX(-90deg); opacity: 0; }
+  100% { transform: perspective(1200px) rotateX(0deg); opacity: 1; }
+}
+
+@keyframes iris-open {
+  0% { clip-path: circle(0% at 50% 50%); }
+  100% { clip-path: circle(150% at 50% 50%); }
+}
+
+@keyframes aurora-shift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-5%, 3%) scale(1.05); }
+  66% { transform: translate(4%, -2%) scale(0.98); }
+}
+
+@keyframes rise-bubble {
+  0%   { transform: translateY(0) scale(0.8); opacity: 0; }
+  10%  { opacity: 0.8; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+@utility animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+@utility animate-heart-beat { animation: heart-beat 1.2s ease-in-out infinite; }
+@utility animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+@utility animate-letter-unfold { animation: letter-unfold 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@utility animate-iris-open { animation: iris-open 1.4s cubic-bezier(0.7, 0, 0.3, 1) forwards; }
+@utility animate-aurora-shift { animation: aurora-shift 20s ease-in-out infinite; }
