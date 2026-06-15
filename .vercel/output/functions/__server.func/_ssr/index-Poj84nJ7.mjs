@@ -3,7 +3,7 @@ import { e as useNavigate } from "../_libs/tanstack__react-router.mjs";
 import { C as Canvas, u as useFrame } from "../_libs/react-three__fiber.mjs";
 import { P as PhotoCarousel3D } from "./PhotoCarousel3D-Bz-kcvIY.mjs";
 import { P as PetalsCanvas } from "./PetalsCanvas-BRMk2Uy0.mjs";
-import { s as startAudio } from "./router-Bj-T3w8_.mjs";
+import { s as startAudio } from "./router-GhMxzNY9.mjs";
 import "../_libs/howler.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { e as Color } from "../_libs/three.mjs";

@@ -229,7 +229,7 @@ const Route$3 = createFileRoute("/lettre")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./galerie-nwDa3bTF.mjs");
+const $$splitComponentImporter$2 = () => import("./galerie-udS4fk-O.mjs");
 const Route$2 = createFileRoute("/galerie")({
   head: () => ({
     meta: [{
@@ -241,7 +241,7 @@ const Route$2 = createFileRoute("/galerie")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./decouverte-CVVLG4_n.mjs");
+const $$splitComponentImporter$1 = () => import("./decouverte-Cy7EjDYQ.mjs");
 const Route$1 = createFileRoute("/decouverte")({
   head: () => ({
     meta: [{
@@ -253,7 +253,7 @@ const Route$1 = createFileRoute("/decouverte")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-B9uDcHkz.mjs");
+const $$splitComponentImporter = () => import("./index-Poj84nJ7.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

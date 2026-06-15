@@ -17,7 +17,7 @@ import "stream";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const CAPTIONS = ["Un sourire que je n'oublie pas.", "Une lumière à toi seule.", "Un instant suspendu.", "Toi, simplement.", "Un éclat de toi.", "Tout est plus doux près de toi."];
+const CAPTIONS = ["Un sourire que je n'oublie pas.", "Une lumière à toi seule.", "Un instant suspendu.", "Toi, simplement.", "Un éclat de toi.", "Tout est plus doux près de toi.", "Une présence qui illumine.", "Ton regard, mon refuge.", "Des moments précieux.", "La beauté de ton être.", "Un bonheur partagé.", "Toi, ma source d'inspiration."];
 function Galerie() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative min-h-screen w-full overflow-hidden bg-rose-night", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10 mx-auto max-w-3xl px-5 pb-32 pt-16", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(motion.h1, { initial: {
