@@ -25,7 +25,6 @@ const CAPTIONS = [
 function Galerie() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-rose-night">
-      {/* <Starfield /> */}
 
       <div className="relative z-10 mx-auto max-w-3xl px-5 pb-32 pt-16">
         <motion.h1
