@@ -1,8 +1,9 @@
 import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent } from "../_libs/tanstack__react-router.mjs";
+import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent, d as useLocation } from "../_libs/tanstack__react-router.mjs";
 import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { h as howlerExports } from "../_libs/howler.mjs";
+import { A as ArrowLeft } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -16,7 +17,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-BZxfbgjD.css";
+const appCss = "/assets/styles-BAl2ew8z.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -87,6 +88,20 @@ function AudioPlayer() {
     }
   );
 }
+function Navigation() {
+  const location = useLocation();
+  if (location.pathname === "/") {
+    return null;
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Link,
+    {
+      to: "/",
+      className: "fixed left-6 top-6 z-50 flex items-center justify-center rounded-full bg-rose-night/70 p-3 text-pearl/80 backdrop-blur-md transition-all hover:bg-rose-night hover:text-gold hover:shadow-lg hover:shadow-gold/30",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowLeft, { size: 20 })
+    }
+  );
+}
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -152,7 +167,7 @@ const Route$6 = createRootRouteWithContext()({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Dancing+Script:wght@400;500;600&display=swap"
       }
     ]
   }),
@@ -173,6 +188,7 @@ function RootShell({ children }) {
 function RootComponent() {
   const { queryClient } = Route$6.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(QueryClientProvider, { client: queryClient, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Navigation, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(AudioPlayer, {})
   ] });
@@ -201,7 +217,7 @@ const Route$4 = createFileRoute("/nous")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./lettre-B6ZkA01u.mjs");
+const $$splitComponentImporter$3 = () => import("./lettre-B5qI51WC.mjs");
 const Route$3 = createFileRoute("/lettre")({
   head: () => ({
     meta: [{
@@ -213,7 +229,7 @@ const Route$3 = createFileRoute("/lettre")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./galerie-L8-k48M0.mjs");
+const $$splitComponentImporter$2 = () => import("./galerie-nwDa3bTF.mjs");
 const Route$2 = createFileRoute("/galerie")({
   head: () => ({
     meta: [{
@@ -225,7 +241,7 @@ const Route$2 = createFileRoute("/galerie")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./decouverte-B7BjqoU3.mjs");
+const $$splitComponentImporter$1 = () => import("./decouverte-CVVLG4_n.mjs");
 const Route$1 = createFileRoute("/decouverte")({
   head: () => ({
     meta: [{
@@ -237,7 +253,7 @@ const Route$1 = createFileRoute("/decouverte")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-BQEtyeot.mjs");
+const $$splitComponentImporter = () => import("./index-B9uDcHkz.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

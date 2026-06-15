@@ -20,6 +20,12 @@ const CAPTIONS = [
   "Toi, simplement.",
   "Un éclat de toi.",
   "Tout est plus doux près de toi.",
+  "Une présence qui illumine.",
+  "Ton regard, mon refuge.",
+  "Des moments précieux.",
+  "La beauté de ton être.",
+  "Un bonheur partagé.",
+  "Toi, ma source d'inspiration.",
 ];
 
 function Galerie() {

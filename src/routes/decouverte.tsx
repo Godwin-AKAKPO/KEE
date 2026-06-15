@@ -50,7 +50,7 @@ function Decouverte() {
           ))}
 
           <div className="grid grid-cols-1 gap-8 pt-8 sm:grid-cols-2">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
               <Polaroid key={i} index={i} />
             ))}
           </div>
@@ -60,7 +60,7 @@ function Decouverte() {
               to="/galerie"
               className="inline-block rounded-full border border-pearl/70 bg-pearl/10 px-8 py-3 font-sans text-sm uppercase tracking-[0.3em] text-pearl backdrop-blur-md transition hover:bg-pearl/20"
             >
-              Continuer →
+              Continue →
             </Link>
           </div>
         </div>

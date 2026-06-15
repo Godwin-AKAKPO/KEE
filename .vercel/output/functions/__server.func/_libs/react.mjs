@@ -1,3 +1,24 @@
+function _mergeNamespaces(n, m) {
+  for (var i = 0; i < m.length; i++) {
+    const e = m[i];
+    if (typeof e !== "string" && !Array.isArray(e)) {
+      for (const k in e) {
+        if (k !== "default" && !(k in n)) {
+          const d = Object.getOwnPropertyDescriptor(e, k);
+          if (d) {
+            Object.defineProperty(n, k, d.get ? d : {
+              enumerable: true,
+              get: function() {
+                return e[k];
+              }
+            });
+          }
+        }
+      }
+    }
+  }
+  return Object.freeze(n);
+}
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -439,6 +460,10 @@ function requireReact() {
 }
 var reactExports = requireReact();
 const React__default = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
+const React = /* @__PURE__ */ _mergeNamespaces({
+  __proto__: null,
+  default: React__default
+}, [reactExports]);
 var jsxRuntime = { exports: {} };
 var reactJsxRuntime_production = {};
 var hasRequiredReactJsxRuntime_production;
@@ -482,6 +507,7 @@ var jsxRuntimeExports = requireJsxRuntime();
 export {
   React__default as R,
   requireReact as a,
+  React as b,
   commonjsGlobal as c,
   getDefaultExportFromCjs as g,
   jsxRuntimeExports as j,
